@@ -38,6 +38,9 @@
                                 <p>To build the deep learning models, I employed the Python programming language and popular deep learning libraries such as TensorFlow and Keras. For the VGG16 and ResNet50v2 architectures, I utilized transfer learning and fine-tuning techniques. This involved initializing the models with pre-trained weights on ImageNet and then fine-tuning the models on the pneumonia dataset. By adapting the models to the specific pneumonia detection task, I aimed to improve their performance.
                                     During the fine-tuning process, I set the learning rate to 0.0001 and used the Adam optimizer. This combination allowed the models to learn from the pneumonia dataset while preserving the valuable features learned from the large-scale ImageNet dataset. The fine-tuning process helped optimize the models' performance specifically for pneumonia detection, enhancing their accuracy and sensitivity.
                                 </p>
+
+                                <h2>Results</h2>
+                                <p>Upon completing the training process, I evaluated the performance of each model. The fine-tuned VGG16 model achieved an accuracy of 93%, while the fine-tuned ResNet50v2 model demonstrated an impressive accuracy of 95%. These results demonstrate the effectiveness of fine-tuning and data augmentation in improving the models' ability to accurately detect pneumonia from chest X-ray images. The custom convolutional layer model, trained from scratch and augmented with data augmentation techniques, also achieved a commendable accuracy of 90%.</p>
                                 <a target="_blank" href="images/vgg16.JPG">
                                     <img src="images/vgg16.JPG" alt="VGG16" style="width: 250px;">
                                     <figcaption>VGG16 Accuracy Graph</figcaption>
@@ -50,6 +53,16 @@
                                     <img src="images/CNN.JPG" alt="CNN" style="width: 250px;">
                                     <figcaption>CNN Accuracy Graph</figcaption>
                                   </a>
+                                
+                                <h2>Streamlit Application</h2>
+                                <p>To provide a comprehensive and user-friendly experience, I developed a Streamlit application for pneumonia detection. This application allows users to select a preferred model—fine-tuned VGG16, fine-tuned ResNet50v2, or the custom convolutional layer model—and upload a chest X-ray image. The chosen model then analyzes the image in real-time, providing feedback on whether pneumonia is present or not.
+                                    Additionally, I incorporated the ability for users to save the results along with key performance metrics, including F1 scores, precision, and recall. After analyzing an image, users have the option to generate a PDF report containing the prediction result, the associated confidence score, and the performance metrics of the chosen model. This functionality enables medical professionals to easily document and review the outcomes of the pneumonia detection process for further analysis or record-keeping purposes.                                    
+                                    By integrating the PDF report generation feature, the Streamlit application enhances usability and provides a valuable tool for medical professionals to track and document the results of their pneumonia diagnoses accurately.</p>
+                                
+                                <a target="_blank" href="images/streamlit.JPG">
+                                        <img src="images/streamlit.JPG" alt="Streamlit" style="width: 250px;">
+                                        <figcaption>Streamlit Application for pneumonia detection</figcaption>
+                                      </a>
                             </header>
                             <ul class="actions special">
                             </ul>
