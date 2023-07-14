@@ -31,7 +31,83 @@
 					<div id="main">
                         <article class="post featured">
                             <header class="major">
-                                <p></p>
+  <h2>Introduction</h2>
+  <p>As part of my mobile app development project using Android Studio, I created a coffee app called "Coffee Delights." This app aims to provide coffee enthusiasts with a comprehensive collection of coffee recipes to explore and enjoy. With a user-friendly interface and intuitive features, Coffee Delights offers a delightful coffee recipe experience right at your fingertips.</p>
+
+  <h2>App Features</h2>
+
+  <h3>Three Tabs</h3>
+  <p>The app consists of three main tabs, each offering a unique functionality to enhance the user experience:</p>
+  <ul>
+    <li><strong>Recipes Tab:</strong> This tab serves as the central hub for users to explore a diverse range of coffee recipes. From classic favorites to innovative creations, the Recipes tab provides an extensive collection of coffee recipes. Each recipe is meticulously crafted, including detailed information about ingredients, instructions, and even nutritional facts. Users can browse through categories or search for specific recipes to find the perfect coffee concoction.</li>
+    <li><strong>Favorites Tab:</strong> Users can save their preferred coffee recipes in the Favorites tab for quick and easy access. This feature allows users to create a personalized collection of their most-loved coffee recipes, making it convenient to revisit and recreate their favorite drinks whenever they desire.</li>
+    <li><strong>Daily Recipes Tab:</strong> The Daily Recipes tab adds an element of surprise and discovery to the app. Every day, a random coffee recipe is generated, providing users with a new and exciting recipe to try. This feature encourages users to step out of their comfort zone and explore different flavors and variations of coffee.</li>
+  </ul>
+
+  <h2>Recipe Details</h2>
+  <p>When users select a specific recipe from the Recipes or Daily Recipes tab, they are presented with a detailed view of the chosen recipe. This view includes comprehensive information about the coffee recipe, such as a list of ingredients, step-by-step instructions, and additional notes or variations. Users can follow the instructions easily, ensuring a successful coffee-making experience each time.</p>
+
+  <h2>Nutritional Facts</h2>
+  <p>For health-conscious users, Coffee Delights includes nutritional facts for each coffee recipe. Users can access information regarding the calorie content, caffeine level, and other relevant nutritional information for their chosen recipes. This feature enables users to make informed decisions about their coffee choices and aligns with their dietary preferences.</p>
+
+  <h2>User-Friendly Interface</h2>
+  <p>The app features a user-friendly interface with intuitive navigation and visually appealing design elements. Clear icons, attractive images, and well-organized content contribute to a seamless and enjoyable user experience. Users can effortlessly browse through recipes, save their favorites, and discover new coffee inspirations.</p>
+
+  <h2>Conclusion:</h2>
+  <p>Coffee Delights, developed using Android Studio, offers coffee enthusiasts a comprehensive and interactive mobile app for exploring and creating a wide range of coffee recipes. With its three distinct tabs, including Recipes, Favorites, and Daily Recipes, users can discover new flavors, save their preferred recipes, and be surprised with a daily random recipe. The detailed recipe information, nutritional facts, and user-friendly interface make Coffee Delights a valuable companion for coffee lovers seeking variety and inspiration in their coffee-making endeavors.</p>
+
+  <p>Through this mobile app development project, I had the opportunity to demonstrate my skills in Android app development using Android Studio. By designing and implementing the Coffee Delights app, I showcased my proficiency in creating engaging user interfaces, incorporating extensive recipe databases, and delivering an exceptional user experience in the realm of coffee appreciation.</p>
+
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 6</div>
+      <img src="images/homePage.jpeg" style="width:40%">
+      <div class="text">Home Page</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 6</div>
+      <img src="images/favPage.jpeg" style="width:40%">
+      <div class="text">Favourites Page</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 6</div>
+      <img src="images/coffeePage.jpeg" style="width:40%">
+      <div class="text">Coffee of the day</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 6</div>
+        <img src="images/ingredientsPage.jpeg" style="width:40%">
+        <div class="text">Recipe for the coffee</div>
+      </div>
+    
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 6</div>
+        <img src="images/instructionPage.jpeg" style="width:40%">
+        <div class="text">Intructions for the coffee</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">6 / 6</div>
+        <img src="images/sourcePage.jpeg" style="width:40%">
+        <div class="text">Source for the recipe</div>
+      </div>   
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+      <span class="dot" onclick="currentSlide(4)"></span> 
+      <span class="dot" onclick="currentSlide(5)"></span> 
+      <span class="dot" onclick="currentSlide(6)"></span> 
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
                             </header>
                             <ul class="actions special">
                             </ul>
@@ -39,6 +115,34 @@
                     </div>
 
         		<!-- Scripts -->
+                <script>
+                    let slideIndex = 1;
+                    showSlides(slideIndex);
+                    
+                    function plusSlides(n) {
+                      showSlides(slideIndex += n);
+                    }
+                    
+                    function currentSlide(n) {
+                      showSlides(slideIndex = n);
+                    }
+                    
+                    function showSlides(n) {
+                      let i;
+                      let slides = document.getElementsByClassName("mySlides");
+                      let dots = document.getElementsByClassName("dot");
+                      if (n > slides.length) {slideIndex = 1}    
+                      if (n < 1) {slideIndex = slides.length}
+                      for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                      }
+                      for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                      }
+                      slides[slideIndex-1].style.display = "block";  
+                      dots[slideIndex-1].className += " active";
+                    }
+                    </script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>

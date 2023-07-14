@@ -10,7 +10,7 @@
     <body class="is-preload">
         <div id="wrapper" class="fade-in">
             <div id="intro">
-                <h1>Web systems<br />
+                <h1>Quote Generator Website for Project Bids<br />
                 <p>Web development using React.js</p>
                 <ul class="actions">
                     <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
@@ -31,7 +31,34 @@
 					<div id="main">
                         <article class="post featured">
                             <header class="major">
-                                <p></p>
+                                <h2>Introduction</h2>
+                                <p>In the world of contract bidding, preparing accurate quotes is a crucial aspect that requires careful consideration and calculation. To empower employees and streamline the process of bidding for contracts, I undertook the development of a web-based application. This project involved building a Quote Generator website using React, adhering to good GitHub practices, and incorporating various functional requirements outlined in the MoSCoW prioritization framework.</p>
+
+                                <h2>Website Functionality</h2>
+                                <p>he Quote Generator website provides users with the necessary tools to prepare accurate project bids by estimating quotes. The following functional requirements were implemented to ensure an efficient and effective user experience:</p>
+                                <ol type="1">
+                                    <li><b>User input and Worker Information:</b>The website allows users to enter project-related information, such as time periods of work (e.g., "man hours") required for completion. Additionally, users can define hourly or daily rates for workers involved in the project, accommodating different pay grades and expertise levels.</li>
+                                    <li><b>Budget calculation:</b>Using a sensible function, the website calculates a final budget figure based on the provided information. The calculation incorporates the number of hours needed and the hourly rates of workers, taking into account different pay grades and resource costs.</li>
+                                    <li><b>Transparent budget explanation:</b>To provide transparency, the website displays information on how the final budget figure was calculated. Users can understand the breakdown of costs associated with human resources and physical resources. However, certain aspects, such as the specific hourly rates, are kept private to prevent easy reverse-engineering of costs.</li>
+                                    <li><b>User accounts and Database Management:</b>Users can create their own accounts, enabling them to save and delete quotes. A Mongo database is utilized to store and manage quote-related information securely.</li>
+                                </ol>
+
+                                <h2>Additional features</h2>
+                                <p>While meeting the core requirements, the Quote Generator website offers additional features to enhance functionality and user experience:</p>
+                                <ol type="1">
+                                    <li><b>Quote modification and combination:</b>Users have the capability to modify existing quotes, enabling them to make necessary adjustments. The website also supports the combination of multiple quotes, allowing for more comprehensive project bids.</li>
+                                    <li><b>Dynamic resource functionality:</b>In addition to human resources, the website provides dynamic functionality for adding non-human resources to the calculation. This allows users to include additional costs associated with physical resources.</li>
+                                    <li><b>Administer privileges:</b>The website grants administrator privileges, allowing administrators to make changes to pre-set pay grades and calculate quotes without the fudge factor. These privileges enhance the flexibility and customization options within the system.</li>
+                                </ol>
+
+                                <h2>Security and "Fudge factor"</h2>
+                                <p>To maintain data privacy and prevent easy reverse-engineering of costs, a "fudge factor" has been incorporated into the quote calculations. The fudge factor introduces a random multiplier to specific components of the quote, ensuring the accuracy and privacy of cost estimates. By implementing this security measure, the website safeguards sensitive information and prevents competitors from gaining a competitive advantage.</p>
+
+                                <h2>Video Presentation</h2>
+                                <p>The project includes a video presentation showcasing the functionalities and features of the web system. The video, lasting no longer than 5 minutes, provides a comprehensive demonstration of the website's user interface, code structure, and security aspects. It highlights specific security measures implemented, such as content accessible only to logged-in users or functionalities protected through server calls. The video serves as a backup for any deficiencies in other submission components and addresses Criteria 3 in the grading grid.</p>
+
+                                <h2>Conclusion</h2>
+                                <p>The development of the Quote Generator website using React demonstrates my proficiency in web development and showcases my ability to build practical solutions for complex enterprise tasks. By incorporating essential functionality, database management, security measures, and additional features, the website offers a user-friendly and efficient platform for employees to prepare accurate project bids. This project exemplifies my commitment to delivering high-quality web applications that cater to the needs of businesses and facilitate their success in competitive bidding environments.</p>
                             </header>
                             <ul class="actions special">
                             </ul>
